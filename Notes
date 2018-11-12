@@ -1,0 +1,10 @@
+-You may have to play around with the file locations. Ideally this would've been implemented into a GUI in which there would be an 
+input button so as to robustly deal with the problem.
+
+-The options currently set are the default options for the cell images. If results are undesireable it is worth playing around with
+these option parameters in an effort to conform more to your images. The meanings of the options are included to the right in the code.
+
+-The scaling factor is in place in order to more accurately deal with exremely sharp curves. The higher the number the higher the
+computation time, so if the images of question do not have sharp angles it makes sense to lower the scaling number (with 1 for a circle).
+
+-uncomment/comment whichever block is desireable (curvature on top of BW masks or on top of raw cell images).
