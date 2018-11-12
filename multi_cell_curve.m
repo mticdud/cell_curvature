@@ -49,7 +49,6 @@ for i=1:5
     gencolor_curves(newvertsx,newvertsy,k,param,B)
     Curve_Video(i) = getframe;
 end
-
 disp('Saving curvature videos to current Matlab directory path')
 y = VideoWriter('Curve_Video_Cellstack.avi', 'Uncompressed AVI');
 y.FrameRate = 20;
@@ -86,9 +85,8 @@ for i=1:10
 end
 
 disp('Saving curvature videos to current Matlab directory path')
-y = VideoWriter('Curve_Video_Cellstack.avi', 'Uncompressed AVI');
+y = VideoWriter('Curve_Video_Cellstack2.avi', 'Uncompressed AVI');
 y.FrameRate = 20;
 open(y)
 writeVideo(y,Curve_Video)
 close(y)
-
