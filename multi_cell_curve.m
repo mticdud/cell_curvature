@@ -29,8 +29,8 @@ Options.GIterations=0; %Number of GVF iterations, default 0 %400 before
 
 %{
 %Make Curvature Video with Masks:
-Curve_Video(5) = struct('cdata',[],'colormap',[]);
-for i=1:5
+Curve_Video(out) = struct('cdata',[],'colormap',[]);
+for i=1:out
     close all
     disp('Executing Snake Method Frame:')
     disp(i)
@@ -49,7 +49,6 @@ for i=1:5
     gencolor_curves(newvertsx,newvertsy,k,param,B)
     Curve_Video(i) = getframe;
 end
-
 disp('Saving curvature videos to current Matlab directory path')
 y = VideoWriter('Curve_Video_Cellstack.avi', 'Uncompressed AVI');
 y.FrameRate = 20;
@@ -59,8 +58,8 @@ close(y)
 %}
 
 %Make Curvature Video with Raw Cell Images:
-Curve_Video(10) = struct('cdata',[],'colormap',[]);
-for i=1:10
+Curve_Video(out2) = struct('cdata',[],'colormap',[]);
+for i=1:out2
     close all
     disp('Executing Snake Method Frame:')
     disp(i)
@@ -86,9 +85,8 @@ for i=1:10
 end
 
 disp('Saving curvature videos to current Matlab directory path')
-y = VideoWriter('Curve_Video_Cellstack.avi', 'Uncompressed AVI');
+y = VideoWriter('Curve_Video_Cellstack2.avi', 'Uncompressed AVI');
 y.FrameRate = 20;
 open(y)
 writeVideo(y,Curve_Video)
 close(y)
-
