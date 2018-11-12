@@ -80,7 +80,7 @@ for i=1:out2
     param = .02;
     set(0,'DefaultFigureVisible','on');
     
-    gencolor_curves((newvertsx/7),(newvertsy/7),k,param,strang_cell)
+    gencolor_curves((newvertsx/scaling),(newvertsy/scaling),k,param,strang_cell)
     Curve_Video(i) = getframe;
 end
 
